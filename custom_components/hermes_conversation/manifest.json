@@ -1,0 +1,19 @@
+{
+    "domain": "hermes_conversation",
+    "name": "Hermes Conversation",
+    "codeowners": [
+        "@evgenyyy"
+    ],
+    "config_flow": true,
+    "dependencies": [
+        "conversation"
+    ],
+    "documentation": "https://github.com/evgenyyy/hermes-conversation",
+    "integration_type": "service",
+    "iot_class": "cloud_polling",
+    "issue_tracker": "https://github.com/evgenyyy/hermes-conversation/issues",
+    "requirements": [
+        "voluptuous-openapi"
+    ],
+    "version": "0.0.0-dev"
+}
