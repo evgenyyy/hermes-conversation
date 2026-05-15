@@ -25,7 +25,7 @@ classifiers = [
 description = "A custom component for Home Assistant to use webhooks for conversation and AI features."
 readme = "README.md"
 requires-python = ">=3.14.2"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = []
 
 [project.urls]

@@ -46,7 +46,16 @@ Responses are newline-delimited JSON. Existing Webhook Conversation chunks still
 {"type":"end"}
 ```
 
-Hermes Conversation additionally reads response-control metadata from any chunk:
+Hermes Conversation additionally reads response-control metadata from any chunk. It also supports `status` chunks for holding/progress speech while the webhook keeps working:
+
+```json
+{"type":"status","content":"I'm working on that now. ","continue_conversation":true}
+{"type":"status","content":"Still working on it. ","continue_conversation":true}
+{"type":"final","content":"Short spoken answer.","continue_conversation":true}
+{"type":"end"}
+```
+
+The stream stays open until `end`, so Home Assistant should not close the request after a holding message. Existing `item` chunks still work:
 
 ```json
 {"type":"item","content":"Short spoken answer.","continue_conversation":true}
